@@ -48,7 +48,7 @@
     text-transform: capitalize;
     @include font-source-sans($size-regular + 4px, $white, $weight-bold, 1, $main-font); 
     &:hover, &:focus{
-        background-color: $transparent;
+        background-color: $light;
         color: $helper;
     }
 }

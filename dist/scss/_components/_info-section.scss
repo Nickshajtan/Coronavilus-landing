@@ -3,7 +3,12 @@
     padding: 70px 0 50px 0;
 }
 .info-section{
+    .section-title{
+        width: 100%;
+        text-align: center;
+    }
     .section-title h2{
+        margin-top: 0;
         margin-bottom: 0;
     }
     iframe{
@@ -12,6 +17,48 @@
         overflow: hidden;
         margin-bottom: 40px;
     }   
+    .links{
+        &, & a{
+            @include font-source-sans($size-regular, $black, $weight-bold, 1, $main-font); 
+        }
+        a{
+            padding-left: 40px;
+            display: inline-flex;
+            flex-direction: row-reverse;
+            text-decoration: none;
+            transition: .3s;
+            &:hover, &:focus{
+                color: $helper;
+            }
+            &.embed{
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 25px;
+                    height: 20px;
+                    background-image: url(../img/icons/embed.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            &.share{
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 25px;
+                    height: 20px;
+                    margin-right: 5px;
+                    background-image: url(../img/icons/share.svg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        position: absolute;
+        right: 10%;
+        top: 20%;
+    }
 }
 @media screen and ( max-width: 1200px ){
     .info-section{
@@ -31,6 +78,11 @@
     .info-section{
         iframe{
             height: 350px;
+        }
+        .links{
+            position: relative;
+            margin-bottom: 20px;
+            right: 0;
         }
     }
 }
