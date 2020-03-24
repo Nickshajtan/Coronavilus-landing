@@ -1,0 +1,21 @@
+.posts-wrap{
+    background-color: $light;
+    padding: 70px 0;
+}
+.posts-section{
+    display: flex;
+    flex-wrap: wrap;
+    .post-wrapper{
+        width: 33.33333%;
+        padding: 0 5px;
+    }
+    .post{
+        max-width: 450px;
+        background-color: $white;
+        border-radius: 15px;
+        padding: 20px 5px 35px 35px;
+    }
+    .post-title{
+        @include font-source-sans($size-middler, inherit, $weight-bold, $line-normal, $main-font);   
+    }
+}

@@ -1,0 +1,26 @@
+.masthead{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    @include bg--auto( lighten( $black, 60% ), url(../img/header@2x.png), cover, no-repeat,  multiply );
+}
+.header-section{
+    min-height: 650px;
+    h1{
+        margin: 0;
+        margin-bottom: 15px;
+        @include font-source-sans($size-big, $white, $weight-bold, $line-big, $main-font);
+    }
+}
+
+@media screen and ( max-width: 768px ){
+    .header-section{
+        min-height: 100vh;
+        h1{
+            font-size: 36px;
+            text-transform: uppercase;
+            word-break: break-all;
+        }
+    }
+}
