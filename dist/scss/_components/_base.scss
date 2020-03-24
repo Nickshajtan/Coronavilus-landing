@@ -96,7 +96,7 @@ section{
     }
 }
 .section-title{
-    @include font-source-sans($size-middle, inherit, $weight-bold, $line-normal, $main-font);
+    @include font-source-sans($size-middle, inherit, $weight-bold, 1.2, $main-font);
     margin: 0;
 }
 .text-white{
