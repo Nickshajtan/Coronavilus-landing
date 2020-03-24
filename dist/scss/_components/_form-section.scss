@@ -6,17 +6,20 @@
     .section-title{
         text-transform: uppercase;
         font-size: $size-middler;
+        line-height: 1.2;
     }
     form{
         margin-top: 30px;
         max-width: 100%;
+        width: 100%;
         input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea{
             padding: 8px 15px;
             border-radius: 0;
         }
         input{
-            @include font-source-sans($size-regular, $dark, $weight-lighter, 1, $helper-font);
+            @include font-source-sans($size-regular - 4px, inherit, $weight-normal, 1, $helper-font);
             padding: 8px 15px;
+            height: 55px;
             max-width: 100%;
             &:focus, &:hover, &:active{
                 outline: none;
@@ -24,22 +27,43 @@
             }
             &[type=email]{
                 width: 100%;
-                max-width: 330px;
+                max-width: 416px;
             }
             &[type=submit]{
                 color: $light;
                 background-color: $helper;
                 border: 2px solid $helper;
-                padding: 12px 15px;
-                max-height: 39px;
-                margin-left: 10px;
+                width: 100%;
+                max-width: 160px;
+                margin-left: 15px;
+                max-height: 55px;
                 cursor: pointer;
                 transition: .3s;
+                text-transform: capitalize;
+                @include font-source-sans($size-regular + 4px, $white, $weight-bold, 1, $main-font); 
                 &:active, &:focus, &:hover{
                     color: $helper;
                     background-color: $light;
                     border: 2px solid $helper;
                 }
+            }
+        }
+    }
+}
+@media screen and ( max-width: 767px ){
+    .subscribe-wrap{
+        padding: 50px 0;
+    }
+    .form-section{
+        form{
+            flex-direction: column;
+            input:not( [type=submit] ){
+                margin-bottom: 10px;
+            }
+            input[type=submit]{
+                margin-left: 0;
+                margin-right: 0;
+                max-width: 100%;
             }
         }
     }

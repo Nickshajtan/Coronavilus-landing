@@ -45,9 +45,26 @@
     max-width: 215px;
     border-radius: 5px;
     padding:  15px 0;
+    text-transform: capitalize;
     @include font-source-sans($size-regular + 4px, $white, $weight-bold, 1, $main-font); 
     &:hover, &:focus{
         background-color: $transparent;
         color: $helper;
+    }
+}
+@media screen and ( max-width: 1000px ){
+    .posts-section{
+        .post-wrapper{
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+}
+@media screen and ( max-width: 767px ){
+    .posts-section{
+        .post-wrapper{
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
 }
